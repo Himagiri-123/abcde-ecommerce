@@ -1,0 +1,206 @@
+/* Universal Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Navbar Styling --- */
+nav {
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); /* Modern Blue Gradient */
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav h1 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-buttons button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.nav-buttons button:hover {
+  background: white;
+  color: #182848;
+  transform: translateY(-2px);
+}
+
+.btn-logout {
+  background-color: #ff416c !important; /* Red for logout */
+  border: none !important;
+}
+
+/* --- Main Layout Container (The Center Fix) --- */
+.main-container {
+  width: 100%;
+  max-width: 1200px; /* లాప్‌టాప్ లో ఇంతకంటే సాగదు */
+  margin: 0 auto;    /* ఇదే పేజీని మధ్యలో ఉంచుతుంది! */
+  padding: 30px 20px;
+  flex: 1;
+}
+
+/* --- Headings --- */
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* --- Grid System (Laptop View Fix) --- */
+.grid-container {
+  display: grid;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Mobile: 1 Item */
+.grid-container {
+  grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 Items */
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop: 3 Items */
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop: 4 Items */
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Card Design --- */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  height: 180px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.price {
+  font-size: 1.4rem;
+  color: #27ae60;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0;
+}
+
+.btn-add {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background: #2980b9;
+}
+
+/* --- Cart & Order History List Styles --- */
+.list-item {
+  background: white;
+  border: 1px solid #eee;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.btn-danger {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
