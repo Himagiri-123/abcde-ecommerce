@@ -28,7 +28,7 @@ mongoose.connect(process.env.MONGO_URI)
     .then(async () => {
         console.log("✅ MongoDB Connected Successfully!");
         
-        // కొత్త ఐటమ్స్ యాడ్ చేసే లాజిక్
+       
         const count = await Item.countDocuments();
         if (count < 5) { 
             console.log("⚙️ Adding more demo items...");

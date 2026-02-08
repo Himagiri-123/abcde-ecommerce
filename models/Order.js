@@ -12,7 +12,7 @@ const orderSchema = new mongoose.Schema({
             quantity: { type: Number }
         }
     ],
-    createdAt: { type: Date, default: Date.now } // ఆర్డర్ ఎప్పుడు పెట్టారో డేట్
+    createdAt: { type: Date, default: Date.now } 
 });
 
 module.exports = mongoose.model('Order', orderSchema);

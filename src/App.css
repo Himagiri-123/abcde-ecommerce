@@ -70,8 +70,8 @@ nav h1 {
 /* --- Main Layout Container (The Center Fix) --- */
 .main-container {
   width: 100%;
-  max-width: 1200px; /* లాప్‌టాప్ లో ఇంతకంటే సాగదు */
-  margin: 0 auto;    /* ఇదే పేజీని మధ్యలో ఉంచుతుంది! */
+  max-width: 1200px; 
+  margin: 0 auto;    
   padding: 30px 20px;
   flex: 1;
 }

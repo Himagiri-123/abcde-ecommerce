@@ -18,7 +18,7 @@ function App() {
         <>
           <Navbar setLoggedIn={setLoggedIn} setView={setView} />
           
-          {/* ఈ బాక్స్ వల్ల పేజీ మధ్యలోకి వస్తుంది */}
+          {}
           <div className="main-container">
             {view === 'home' && <ItemList />}
             {view === 'cart' && <Cart goBack={() => setView('home')} />}

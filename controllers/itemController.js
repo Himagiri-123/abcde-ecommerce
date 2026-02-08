@@ -1,6 +1,6 @@
 const Item = require('../models/Item');
 
-// 1. అన్ని ఐటమ్స్ చూపించడం (Get All Items)
+
 exports.getItems = async (req, res) => {
     try {
         const items = await Item.find();
@@ -10,7 +10,7 @@ exports.getItems = async (req, res) => {
     }
 };
 
-// 2. కొత్త ఐటమ్ క్రియేట్ చేయడం (Create Item)
+
 exports.createItem = async (req, res) => {
     try {
         const newItem = new Item(req.body);

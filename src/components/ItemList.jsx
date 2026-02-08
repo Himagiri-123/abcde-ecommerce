@@ -25,7 +25,7 @@ const ItemList = () => {
     }
   };
 
-  // --- కొత్త ఐకాన్ లాజిక్ (అన్ని వస్తువులకు ఐకాన్స్ వస్తాయి) ---
+ 
   const getIcon = (name) => {
     const n = name.toLowerCase();
     if (n.includes('laptop') || n.includes('macbook') || n.includes('dell')) return '💻';
@@ -37,7 +37,7 @@ const ItemList = () => {
     if (n.includes('keyboard')) return '⌨️';
     if (n.includes('monitor') || n.includes('screen') || n.includes('tv')) return '🖥️';
     if (n.includes('pad') || n.includes('tablet')) return '📟';
-    return '📦'; // ఏదీ మ్యాచ్ కాకపోతే ఈ బాక్స్ వస్తుంది
+    return '📦'; 
   };
 
   return (

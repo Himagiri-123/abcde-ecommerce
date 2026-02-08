@@ -31,7 +31,7 @@ const Login = ({ setLoggedIn }) => {
   };
 
   return (
-    // ఈ స్టైల్ బాక్స్ ని స్క్రీన్ మధ్యలో ఉంచుతుంది
+   
     <div style={{ 
       display: 'flex', 
       justifyContent: 'center', 
@@ -47,7 +47,7 @@ const Login = ({ setLoggedIn }) => {
         boxShadow: '0 10px 25px rgba(0,0,0,0.1)', 
         textAlign: 'center',
         width: '100%',
-        maxWidth: '400px' // మరీ పెద్దది కాకుండా
+        maxWidth: '400px' 
       }}>
         <h2 style={{ color: '#4b6cb7', marginBottom: '10px' }}>ABCDE Ventures</h2>
         <p style={{ color: '#777', marginBottom: '20px' }}>Secure Single-Device Login</p>
